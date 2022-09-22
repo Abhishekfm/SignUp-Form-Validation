@@ -178,7 +178,14 @@ input:focus {
 @media screen and (max-width:400px) {
     .girl img{
         left: 0px;
-        top: -35px;
+        top: 67px;
+    }
+    .pswdDiv{
+        flex-direction: column;
+    }
+    .pswdDiv input{
+        width: 94%;
+        margin-bottom: 10px;
     }
 }
 
