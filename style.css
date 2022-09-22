@@ -188,6 +188,9 @@ input:focus {
         width: 94%;
         margin-bottom: 10px;
     }
+    .show{
+        bottom: 0px;
+    }
 }
 
 @media screen and (max-width:1300px) {
