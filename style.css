@@ -140,7 +140,7 @@ input:focus {
 }
 
 .win{
-    display: hidden;
+    display: none;
 }
 
 .show{
