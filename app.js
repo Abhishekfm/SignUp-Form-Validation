@@ -43,10 +43,17 @@ function checkEmail(elementValue){
 
 function checkUser(name){
     let usernameRegex = /^[a-zA-Z0-9]+$/;
-    return usernameRegex.test(name);
+    let an =  usernameRegex.test(name);
+    if(an === false || name.length < 4){
+        return false;
+    }
+    return true;
 }
 
 function checkPswd(f, s){
+    if(f.length < 4 || s.length < 4){
+        return false;
+    }
     if(f.length > 20 || s.length > 20){
         return false;
     }
