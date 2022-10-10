@@ -14,8 +14,8 @@ btn.addEventListener("click",()=>{
     let e = checkEmail(email.value);
     let p = checkPswd(pswd.value, cpswd.value);
     console.log(u);
-    if(u===true && e === true && p === true){
-        // alert("Yeah!!!! You have created your account.");
+    if(u === true && e === true && p === true){
+        alert("Yeah!!!! You have created your account.");
         win.classList.remove('win');
         win.classList.add('show');
         setTimeout(function() {
@@ -23,7 +23,20 @@ btn.addEventListener("click",()=>{
             win.classList.add("win");
         }, 2000);
     }else{
-        // alert("Invalid Details!! Reenter Again");
+        let msg = "";
+        if(u === false){
+            let m = "Your UserName " + user.value + " is Incorrect, "
+            msg += m;
+        }
+        if(e === false){
+            let m = "Your email " + email.value + " is Incorrect, "
+            msg += m;
+        }
+        if(p === false){
+            let m = "Password issue";
+            msg += m;
+        }
+        alert(`${msg}`);
         fm.classList.add('addanimation');
         tt.classList.add('show');
         tt.classList.remove('hidden');
@@ -44,7 +57,7 @@ function checkEmail(elementValue){
 function checkUser(name){
     let usernameRegex = /^[a-zA-Z0-9]+$/;
     let an =  usernameRegex.test(name);
-    if(an === false || name.length < 4){
+    if(an === false || name.length < 2){
         return false;
     }
     return true;
